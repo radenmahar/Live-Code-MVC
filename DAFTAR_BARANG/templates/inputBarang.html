@@ -1,0 +1,18 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block home %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <br><br>
+            <h1> Input Barang </h1>
+            <form method="POST" class="inputbarang">
+                {% csrf_token %}
+                {{fromBarang.as_p}}
+                <button type="submit" class="save btn btn-default">Save</button>
+            </form>
+            <br><br>
+    </div>
+    </div>
+</div>
+{% endblock %}

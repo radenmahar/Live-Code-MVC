@@ -1,0 +1,49 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block home %}
+<br>
+<div class="container">
+        <div class="row">
+                {% for barang in daftar_barang %}
+                <div class = "col-md-3">
+                        <img src="{{barang.picture}}" alt="">
+                        <br>
+                        <h6>{{barang.nama}}</h6>
+                        <h6>{{barang.harga}}</h6>
+                        <br>
+                        <a href="{% url 'detail' barang.id %}" style="color:blue">Lihat Detail</a>
+                    </div>
+                <div class = "col-md-1">
+                </div>
+                <!-- <div>
+
+                </div> -->
+                {% endfor %}
+        </div>
+</div>
+
+{% endblock %}
+
+<!-- <div class = "row">
+        <div class = "col-md-3">
+                <img src="https://i.postimg.cc/bwcrnmq2/iphone.jpg" alt="">
+                <br>
+                <h6>Iphone 6</h6>
+                <h6>Rp. 150.000.000</h6>
+            </div>
+        <div class = "col-md-1">
+        
+    </div>
+    <div class = "col-md-3">
+        <img src="https://i.postimg.cc/XvnvHXGj/monitor.jpg" alt="">
+        <br>
+        <h6>Iphone 6</h6>
+        <h6>Rp. 150.000.000</h6>
+    </div>
+    <div class = "col-md-1">
+        
+    </div>
+    <div class = "col-md-3">
+        <img src="https://i.postimg.cc/bvLwK8kQ/mobil.jpg" alt="">
+    </div>
+</div> -->
